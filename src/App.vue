@@ -1,5 +1,6 @@
 <template>
 	<div>
+    <head-top></head-top>
 		<transition name="router-fade" mode="out-in">
     		<router-view></router-view>
     	</transition>
@@ -7,13 +8,16 @@
 </template>
 
 <script>
-  	export default {
-
-  	}
+  import headTop from './components/header/head'
+  export default {
+    components:{
+      headTop
+    }
+  }
 </script>
 
 <style lang="scss">
-  @import './style/common';
+  @import './assets/style/common';
 	.router-fade-enter-active, .router-fade-leave-active {
 	  	transition: opacity .3s;
 	}
