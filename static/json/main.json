@@ -1,0 +1,13 @@
+{
+  "indexBanner":[
+    {
+      "imgUrl":"/static/upload/home1.png"
+    },
+    {
+      "imgUrl":"/static/upload/home2.png"
+    },
+    {
+      "imgUrl":"/static/upload/home3.png"
+    }
+  ]
+}

@@ -50,7 +50,7 @@
           }
       },
       mounted(){
-          this.per = new Swiper('.swiper-container', {
+          this.per = new Swiper('.type1', {
             slidesPerView: 4,
             paginationClickable: true,
             spaceBetween: 0
@@ -169,17 +169,7 @@
       height: 40px;
       overflow: hidden;
       background: #4c505c;
-      ul {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        box-sizing: content-box;
-        li{
-          -webkit-flex-shrink: 0;
-          -ms-flex: 0 0 auto;
-          flex-shrink: 0;
+      ul li{
           width: 100%;
           position: relative;
           text-align: center;
@@ -189,30 +179,21 @@
           overflow: hidden;
           border-right: 1px solid #616676;
           font-size: 12px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          -webkit-justify-content: center;
-          justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          -webkit-align-items: center;
-          align-items: center;
+          a{
+            display: block;
+            width: 100%;
+          }
           a span,a:visited span{
             color: #fff;
             text-shadow: 0 1px 1px #666;
           }
         }
-        li.navdown{
-          background-color: #ededed;
-          a span{
-            color: #444;
-            text-shadow: none;
-          }
+        ul li.navdown{
+            background-color: #ededed;
+            a span{
+              color: #444;
+              text-shadow: none;
+            }
         }
-      }
     }
 </style>

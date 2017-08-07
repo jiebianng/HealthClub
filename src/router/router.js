@@ -48,11 +48,6 @@ export default [
           {
               path: '/contact',
               component: contact
-          },
-          //错误页面
-          {
-            path: '/*',
-            component: error
           }
       ]
     },
@@ -60,5 +55,10 @@ export default [
     {
       path: '/appointment',
       component: appointment
+    },
+    //错误页面
+    {
+      path: '/*',
+      component: error
     }
 ]

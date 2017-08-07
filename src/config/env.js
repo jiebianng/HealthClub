@@ -7,7 +7,7 @@
  *
  */
 
-let baseUrl = '';
+let baseUrl = '/static/json/main.json';
 let routerMode = 'history';
 let imgBaseUrl = '';
 
