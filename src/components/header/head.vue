@@ -29,12 +29,12 @@
     <!--导航方式1-->
     <nav class="type1 swiper-container">
       <ul class="list-none swiper-wrapper">
-        <li class="swiper-slide" :class="{navdown : 0 == specsIndex}" @click="swiperClickFun(0)"><router-link :to="{path: '/home', query:{swiperSlide:0}}"><span>首页</span></router-link></li>
-        <li class="swiper-slide" :class="{navdown : 1 == specsIndex}" @click="swiperClickFun(1)"><router-link :to="{path: '/about', query:{swiperSlide:1}}"><span>关于我们</span></router-link></li>
-        <li class="swiper-slide" :class="{navdown : 2 == specsIndex}" @click="swiperClickFun(2)"><router-link :to="{path: '/news', query:{swiperSlide:2}}"><span>新闻动态</span></router-link></li>
-        <li class="swiper-slide" :class="{navdown : 3 == specsIndex}" @click="swiperClickFun(3)"><router-link :to="{path: '/curriculum', query:{swiperSlide:3}}"><span>精彩课程</span></router-link></li>
-        <li class="swiper-slide" :class="{navdown : 4 == specsIndex}" @click="swiperClickFun(4)"><router-link :to="{path: '/recruit', query:{swiperSlide:4}}"><span>招贤纳士</span></router-link></li>
-        <li class="swiper-slide" :class="{navdown : 5 == specsIndex}" @click="swiperClickFun(5)"><router-link :to="{path: '/contact', query:{swiperSlide:5}}"><span>联系我们</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 0 == specsIndex}"><router-link :to="{path: '/home', query:{swiperSlide:0}}"><span>首页</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 1 == specsIndex}"><router-link :to="{path: '/about', query:{swiperSlide:1}}"><span>关于我们</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 2 == specsIndex}"><router-link :to="{path: '/news', query:{swiperSlide:2}}"><span>新闻动态</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 3 == specsIndex}"><router-link :to="{path: '/curriculum', query:{swiperSlide:3}}"><span>精彩课程</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 4 == specsIndex}"><router-link :to="{path: '/recruit', query:{swiperSlide:4}}"><span>招贤纳士</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 5 == specsIndex}"><router-link :to="{path: '/contact', query:{swiperSlide:5}}"><span>联系我们</span></router-link></li>
       </ul>
     </nav>
   </header>
@@ -55,22 +55,22 @@
             paginationClickable: true,
             spaceBetween: 0
           });
-          this.swiperUrlFun();
+          this.swiperUrlFun(this.$route.query.swiperSlide);
       },
       methods:{
         searchDefaultFun(){
           this.searchDefault = !this.searchDefault;
         },
-        //导航动画（点击添加高亮）
-        swiperClickFun(num){
-          this.specsIndex = num;
-        },
         //导航动画（url添加高亮）
-        swiperUrlFun(){
-          let swiperSlide =  this.$route.query.swiperSlide;
-          swiperSlide  = swiperSlide ? swiperSlide : 0;
-          this.per.slideTo(swiperSlide,600,false);
-          this.specsIndex = swiperSlide;
+        swiperUrlFun(Slide){
+          Slide  = Slide ? Slide : 0;
+          this.per.slideTo(Slide,600,false);
+          this.specsIndex = Slide;
+        }
+      },
+      watch:{
+        "$route" (value){
+          this.swiperUrlFun(value.query.swiperSlide);
         }
       }
   }
