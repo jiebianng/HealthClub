@@ -30,7 +30,7 @@
     <nav class="type1 swiper-container">
       <ul class="list-none swiper-wrapper">
         <li class="swiper-slide" :class="{navdown : 0 == specsIndex}"><router-link :to="{path: '/home', query:{swiperSlide:0}}"><span>首页</span></router-link></li>
-        <li class="swiper-slide" :class="{navdown : 1 == specsIndex}"><router-link :to="{path: '/about', query:{swiperSlide:1}}"><span>关于我们</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 1 == specsIndex}"><router-link :to="{path: '/about', query:{swiperSlide:1,id:1}}"><span>关于我们</span></router-link></li>
         <li class="swiper-slide" :class="{navdown : 2 == specsIndex}"><router-link :to="{path: '/news', query:{swiperSlide:2}}"><span>新闻动态</span></router-link></li>
         <li class="swiper-slide" :class="{navdown : 3 == specsIndex}"><router-link :to="{path: '/curriculum', query:{swiperSlide:3}}"><span>精彩课程</span></router-link></li>
         <li class="swiper-slide" :class="{navdown : 4 == specsIndex}"><router-link :to="{path: '/recruit', query:{swiperSlide:4}}"><span>招贤纳士</span></router-link></li>

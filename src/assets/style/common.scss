@@ -1,11 +1,9 @@
-body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption, {
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption{
     padding: 0;
     margin: 0;
     list-style: none;
-    font-style: normal;
     text-decoration: none;
     border: none;
-    color: #333;
     font-weight: normal;
     font-family: "Microsoft Yahei";
     box-sizing: border-box;
@@ -14,6 +12,10 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     &:hover{
         outline: none;
     }
+}
+body{
+  font-style: normal;
+  color: #333;
 }
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
