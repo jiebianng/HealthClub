@@ -24,7 +24,7 @@
 
 <script>
 
-  import {toGetData} from '../service/getData'
+  import {home} from '../service/getData'
   export default{
       data(){
         return{
@@ -32,7 +32,7 @@
         }
       },
       mounted(){
-          toGetData().then( res => {
+          home().then( res => {
               this.indexBanner = res.indexBanner;
           });
       },

@@ -37,16 +37,25 @@
       {
         "id":2,
         "title":"公司简介",
+        "url":"/about?swiperSlide=1&id=2",
         "sub":[]
       },
       {
         "id":3,
         "title":"企业优势",
+        "url":"/about?swiperSlide=1&id=3",
         "sub":[]
       },
       {
         "id":4,
         "title":"加盟我们",
+        "url":"/about?swiperSlide=1&id=4",
+        "sub":[]
+      },
+      {
+        "id":5,
+        "title":"联系我们",
+        "url":"/contact?swiperSlide=5&id=5",
         "sub":[]
       }
     ],

@@ -27,14 +27,14 @@
       </div>
     </div>
     <!--导航方式1-->
-    <nav class="type1 swiper-container">
+    <nav class="type1 swiper-container"  ref="headNav" :class="{active : headNavActive}">
       <ul class="list-none swiper-wrapper">
         <li class="swiper-slide" :class="{navdown : 0 == specsIndex}"><router-link :to="{path: '/home', query:{swiperSlide:0}}"><span>首页</span></router-link></li>
         <li class="swiper-slide" :class="{navdown : 1 == specsIndex}"><router-link :to="{path: '/about', query:{swiperSlide:1,id:1}}"><span>关于我们</span></router-link></li>
         <li class="swiper-slide" :class="{navdown : 2 == specsIndex}"><router-link :to="{path: '/news', query:{swiperSlide:2}}"><span>新闻动态</span></router-link></li>
         <li class="swiper-slide" :class="{navdown : 3 == specsIndex}"><router-link :to="{path: '/curriculum', query:{swiperSlide:3}}"><span>精彩课程</span></router-link></li>
         <li class="swiper-slide" :class="{navdown : 4 == specsIndex}"><router-link :to="{path: '/recruit', query:{swiperSlide:4}}"><span>招贤纳士</span></router-link></li>
-        <li class="swiper-slide" :class="{navdown : 5 == specsIndex}"><router-link :to="{path: '/contact', query:{swiperSlide:5}}"><span>联系我们</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 5 == specsIndex}"><router-link :to="{path: '/contact', query:{swiperSlide:5,id:5}}"><span>联系我们</span></router-link></li>
       </ul>
     </nav>
   </header>
@@ -47,6 +47,7 @@
           return {
             searchDefault:false, //是否显示立即搜索
             specsIndex: 0, //当前选中的页面索引值
+            headNavActive: 0, //滑动到离开导航栏页面索引值
           }
       },
       mounted(){
@@ -56,6 +57,7 @@
             spaceBetween: 0
           });
           this.swiperUrlFun(this.$route.query.swiperSlide);
+          this.addScroll();
       },
       methods:{
         searchDefaultFun(){
@@ -66,6 +68,13 @@
           Slide  = Slide ? Slide : 0;
           this.per.slideTo(Slide,600,false);
           this.specsIndex = Slide;
+        },
+        //导航动画（url添加高亮）
+        addScroll(){
+          const baseHeight = this.$refs.headNav.offsetTop;
+          window.addEventListener('scroll',()=>{
+            window.scrollY > baseHeight ? this.headNavActive = 1 : this.headNavActive = 0;
+          });
         }
       },
       watch:{
@@ -195,5 +204,10 @@
               text-shadow: none;
             }
         }
+    }
+    nav.type1.active{
+      position: fixed;
+      top: 0;
+      z-index: 999999;
     }
 </style>
