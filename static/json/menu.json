@@ -4,48 +4,124 @@
       {
         "id":1,
         "title":"关于我们",
-        "url":"/about?swiperSlide=1&id=1",
+        "pathUrl":"about",
+        "Slide":1,
         "sub":[]
       },
       {
         "id":2,
         "title":"公司简介",
-        "url":"/about?swiperSlide=1&id=2",
+        "pathUrl":"about",
+        "Slide":1,
         "sub":[]
       },
       {
         "id":3,
         "title":"企业优势",
-        "url":"/about?swiperSlide=1&id=3",
+        "pathUrl":"about",
+        "Slide":1,
         "sub":[]
       },
       {
         "id":4,
         "title":"加盟我们",
-        "url":"/about?swiperSlide=1&id=4",
+        "pathUrl":"about",
+        "Slide":1,
         "sub":[]
       },
       {
         "id":5,
         "title":"联系我们",
-        "url":"/contact?swiperSlide=5&id=5",
+        "pathUrl":"contact",
+        "Slide":5,
         "sub":[]
       }
     ],
     "news":[
       {
+        "id":1,
+        "title":"企业新闻",
+        "pathUrl":"news",
+        "Slide":2,
+        "sub":[]
+      },
+      {
         "id":2,
-        "title":"公司简介",
+        "title":"业界资讯",
+        "pathUrl":"news",
+        "Slide":2,
+        "sub":[]
+      },
+      {
+        "id":3,
+        "title":"健身知识",
+        "pathUrl":"news",
+        "Slide":2,
+        "sub":[]
+      }
+    ],
+    "curriculum":[
+      {
+        "id":1,
+        "title":"身心类课程",
+        "pathUrl":"curriculum",
+        "Slide":3,
         "sub":[
           {
-            "id":5,
+            "senId":5,
             "title":"健身瑜伽"
           },
           {
-            "id":6,
+            "senId":6,
             "title":"普拉提"
           }
         ]
+      },
+      {
+        "id":2,
+        "title":"综合有氧类",
+        "pathUrl":"curriculum",
+        "Slide":3,
+        "sub":[
+          {
+            "senId":7,
+            "title":"有氧健身球"
+          },
+          {
+            "senId":8,
+            "title":"健身操"
+          }
+        ]
+      },
+      {
+        "id":3,
+        "title":"形体课程",
+        "pathUrl":"curriculum",
+        "Slide":3,
+        "sub":[]
+      },
+      {
+        "id":4,
+        "title":"武术课程",
+        "pathUrl":"curriculum",
+        "Slide":3,
+        "sub":[]
+      }
+    ],
+    "recruit":[
+      {
+        "id":1,
+        "title":"招贤纳士",
+        "pathUrl":"recruit",
+        "Slide":4,
+        "sub":[]
+      },
+      {
+        "id":2,
+        "title":"在线招聘",
+        "pathUrl":"recruitDetail",
+        "Slide":4,
+        "sub":[]
       }
     ]
   }

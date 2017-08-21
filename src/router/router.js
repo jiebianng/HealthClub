@@ -8,6 +8,7 @@ const curriculum = r => require.ensure([], () => r(require('../page/curriculum')
 const recruit = r => require.ensure([], () => r(require('../page/recruit')), 'recruit');
 const contact = r => require.ensure([], () => r(require('../page/contact')), 'contact');
 const search = r => require.ensure([], () => r(require('../page/search')), 'search');
+const recruitDetail = r => require.ensure([], () => r(require('../page/recruitDetail')), 'recruitDetail');
 const error = r => require.ensure([], () => r(require('../page/error')), 'error');
 
 export default [
@@ -45,6 +46,11 @@ export default [
               path: '/recruit',
               component: recruit
           },
+          //在线招聘
+          {
+            path: '/recruitDetail',
+            component: recruitDetail
+          },
           //联系我们
           {
               path: '/contact',
@@ -57,7 +63,7 @@ export default [
       path: '/appointment',
       component: appointment
     },
-    //联系我们
+    //搜索
     {
       path: '/search',
       component: search

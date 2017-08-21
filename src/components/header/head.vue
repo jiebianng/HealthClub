@@ -14,16 +14,14 @@
     <div class="seachbox topmorebox" :class='{active: searchDefault}'>
       <div class="seachbox_box">
         <i></i>
-        <form method="POST" name="myform" action="">
-          <div class="gutsy-table">
-            <div class="gutsy-cell gutsy-wi100">
-              <input type="text" name="searchword" class="text" placeholder="请输入关键词" />
-            </div>
-            <div class="gutsy-cell gutsy-wh-sp gutsy-mi">
-              <input type="submit" name="Submit" value="立即搜索" class="submit" />
-            </div>
+        <div class="gutsy-table">
+          <div class="gutsy-cell gutsy-wi100">
+            <input type="text" name="searchword" class="text" placeholder="请输入关键词" />
           </div>
-        </form>
+          <div class="gutsy-cell gutsy-wh-sp gutsy-mi">
+            <input type="submit" name="Submit" value="立即搜索" class="submit" @click="searchSubmit"/>
+          </div>
+        </div>
       </div>
     </div>
     <!--导航方式1-->
@@ -31,9 +29,9 @@
       <ul class="list-none swiper-wrapper">
         <li class="swiper-slide" :class="{navdown : 0 == specsIndex}"><router-link :to="{path: '/home', query:{swiperSlide:0}}"><span>首页</span></router-link></li>
         <li class="swiper-slide" :class="{navdown : 1 == specsIndex}"><router-link :to="{path: '/about', query:{swiperSlide:1,id:1}}"><span>关于我们</span></router-link></li>
-        <li class="swiper-slide" :class="{navdown : 2 == specsIndex}"><router-link :to="{path: '/news', query:{swiperSlide:2}}"><span>新闻动态</span></router-link></li>
-        <li class="swiper-slide" :class="{navdown : 3 == specsIndex}"><router-link :to="{path: '/curriculum', query:{swiperSlide:3}}"><span>精彩课程</span></router-link></li>
-        <li class="swiper-slide" :class="{navdown : 4 == specsIndex}"><router-link :to="{path: '/recruit', query:{swiperSlide:4}}"><span>招贤纳士</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 2 == specsIndex}"><router-link :to="{path: '/news', query:{swiperSlide:2,id:1}}"><span>新闻动态</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 3 == specsIndex}"><router-link :to="{path: '/curriculum', query:{swiperSlide:3,id:1}}"><span>精彩课程</span></router-link></li>
+        <li class="swiper-slide" :class="{navdown : 4 == specsIndex}"><router-link :to="{path: '/recruit', query:{swiperSlide:4,id:1}}"><span>招贤纳士</span></router-link></li>
         <li class="swiper-slide" :class="{navdown : 5 == specsIndex}"><router-link :to="{path: '/contact', query:{swiperSlide:5,id:5}}"><span>联系我们</span></router-link></li>
       </ul>
     </nav>
@@ -75,6 +73,10 @@
           window.addEventListener('scroll',()=>{
             window.scrollY > baseHeight ? this.headNavActive = 1 : this.headNavActive = 0;
           });
+        },
+        //提交搜索
+        searchSubmit(){
+          this.$router.push('/search');
         }
       },
       watch:{

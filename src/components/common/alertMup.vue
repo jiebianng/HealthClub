@@ -7,11 +7,10 @@
        </h3>
      </div>
      <div class="sidebar" :class='{active : openSideIf}'>
-       <h3 class="title" @click="closeSidebar">{{menuTitle}}</h3>
        <dl class="list-none" @click="closeSidebar" v-for="(item,index) in menuCont" :key="index">
-         <dt><router-link :to="item.url" :title="item.title" class="zm"><span>{{item.title}}</span></router-link></dt>
+         <dt :class="{active : item.id == ($route.query.id ? $route.query.id : menuCont[0].id)}"><router-link :to="{path: item.pathUrl, query:{swiperSlide:item.Slide,id:item.id}}" :title="item.title" class="zm"><span>{{item.title}}</span></router-link></dt>
          <dd class="sub" v-if="item.sub.length">
-           <h4 v-for="(item,index) in item.sub" :key="index"><a href="" title=""><span>{{item.title}}</span></a></h4>
+           <h4 :class="{active : ite.senId == $route.query.senId}" v-for="(ite,index) in item.sub" :key="index"><router-link :to="{path: item.pathUrl, query:{swiperSlide:item.Slide,id:item.id,senId:ite.senId}}" :title="ite.title"><span>{{ite.title}}</span></router-link></h4>
          </dd>
        </dl>
      </div>
@@ -40,11 +39,16 @@
           async initData (contId){
             menu().then( res => {
               this.menuCont=res.moreMeu[this.alertMupType];
-              this.menuCont.forEach((item,index) => {
-                if(item.id==contId){
-                  this.menuTitle = item.title;
-                }
-              });
+              this.getMenuTitle(contId);
+            });
+          },
+          //获取标题数据
+          getMenuTitle (contId){
+            contId ? contId : (contId = this.menuCont[0].id);
+            this.menuCont.forEach((item,index) => {
+              if(item.id==contId){
+                this.menuTitle = item.title;
+              }
             });
           },
            //切换弹出层
@@ -58,7 +62,7 @@
         },
         watch:{
           "$route" (value){
-            this.initData(value.query.id);
+            this.getMenuTitle(value.query.id);
           }
         }
     }
@@ -75,18 +79,6 @@
     z-index: 9999;
     -webkit-transition: left linear .2s;
     transition: left linear .2s;
-    h3.title {
-      padding: 0 10px;
-      height: 46px;
-      line-height: 46px;
-      margin: 0;
-      text-align: center;
-      font-weight: normal;
-      background: url(../../assets/images/navmore.png) no-repeat 95% center;
-      background-size: 12px;
-      font-size: 16px;
-      color: #fff;
-    }
     dt{
       border-bottom: 1px solid #7b7b7b;
       background: url(../../assets/images/navmore.png) no-repeat 95% center;
@@ -101,6 +93,9 @@
           font-size: 14px;
         }
       }
+    }
+    dt.active{
+      background-color: #395f5d;
     }
     dd{
       border-bottom: 1px solid #7b7b7b;
@@ -122,6 +117,9 @@
             color: #efefef;
           }
         }
+      }
+      h4.active{
+        background-color: #73867b;
       }
     }
   }

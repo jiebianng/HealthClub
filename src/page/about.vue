@@ -28,7 +28,7 @@
       methods:{
           //初始化时获取基本数据
           async initData (contId){
-            about().then( res => {
+            about(contId).then( res => {
               res.aboutUs.forEach((item,index) => {
                 if(item.id==contId){
                   this.aboutCont = item.content;
