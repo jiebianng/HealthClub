@@ -4,11 +4,13 @@ const home = r => require.ensure([], () => r(require('../page/home')), 'home');
 const about = r => require.ensure([], () => r(require('../page/about')), 'about');
 const appointment = r => require.ensure([], () => r(require('../page/appointment')), 'appointment');
 const news = r => require.ensure([], () => r(require('../page/news')), 'news');
+const newsDetail = r => require.ensure([], () => r(require('../page/newsDetail')), 'newsDetail');
 const curriculum = r => require.ensure([], () => r(require('../page/curriculum')), 'curriculum');
+const curriculumDetail = r => require.ensure([], () => r(require('../page/curriculumDetail')), 'curriculumDetail');
 const recruit = r => require.ensure([], () => r(require('../page/recruit')), 'recruit');
 const contact = r => require.ensure([], () => r(require('../page/contact')), 'contact');
-const search = r => require.ensure([], () => r(require('../page/search')), 'search');
 const recruitDetail = r => require.ensure([], () => r(require('../page/recruitDetail')), 'recruitDetail');
+const recruitApply = r => require.ensure([], () => r(require('../page/recruitApply')), 'recruitApply');
 const error = r => require.ensure([], () => r(require('../page/error')), 'error');
 
 export default [
@@ -48,8 +50,8 @@ export default [
           },
           //在线招聘
           {
-            path: '/recruitDetail',
-            component: recruitDetail
+            path: '/recruitApply',
+            component: recruitApply
           },
           //联系我们
           {
@@ -63,10 +65,20 @@ export default [
       path: '/appointment',
       component: appointment
     },
-    //搜索
+    //新闻动态详情
     {
-      path: '/search',
-      component: search
+      path: '/newsDetail',
+      component: newsDetail
+    },
+    //招纳贤士详情
+    {
+      path: '/recruitDetail',
+      component: recruitDetail
+    },
+    //精彩课程详情
+    {
+      path: '/curriculumDetail',
+      component: curriculumDetail
     },
     //错误页面
     {

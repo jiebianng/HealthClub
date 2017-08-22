@@ -68,12 +68,14 @@
         "Slide":3,
         "sub":[
           {
-            "senId":5,
-            "title":"健身瑜伽"
+            "senId":1,
+            "title":"健身瑜伽",
+            "pathUrl":"curriculumDetail"
           },
           {
-            "senId":6,
-            "title":"普拉提"
+            "senId":2,
+            "title":"普拉提",
+            "pathUrl":"curriculumDetail"
           }
         ]
       },
@@ -84,12 +86,14 @@
         "Slide":3,
         "sub":[
           {
-            "senId":7,
-            "title":"有氧健身球"
+            "senId":3,
+            "title":"有氧健身球",
+            "pathUrl":"curriculumDetail"
           },
           {
-            "senId":8,
-            "title":"健身操"
+            "senId":4,
+            "title":"健身操",
+            "pathUrl":"curriculumDetail"
           }
         ]
       },
@@ -119,7 +123,7 @@
       {
         "id":2,
         "title":"在线招聘",
-        "pathUrl":"recruitDetail",
+        "pathUrl":"recruitApply",
         "Slide":4,
         "sub":[]
       }

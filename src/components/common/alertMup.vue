@@ -10,7 +10,7 @@
        <dl class="list-none" @click="closeSidebar" v-for="(item,index) in menuCont" :key="index">
          <dt :class="{active : item.id == ($route.query.id ? $route.query.id : menuCont[0].id)}"><router-link :to="{path: item.pathUrl, query:{swiperSlide:item.Slide,id:item.id}}" :title="item.title" class="zm"><span>{{item.title}}</span></router-link></dt>
          <dd class="sub" v-if="item.sub.length">
-           <h4 :class="{active : ite.senId == $route.query.senId}" v-for="(ite,index) in item.sub" :key="index"><router-link :to="{path: item.pathUrl, query:{swiperSlide:item.Slide,id:item.id,senId:ite.senId}}" :title="ite.title"><span>{{ite.title}}</span></router-link></h4>
+           <h4 :class="{active : ite.senId == $route.query.senId}" v-for="(ite,index) in item.sub" :key="index"><router-link :to="{path: ite.pathUrl, query:{swiperSlide:item.Slide,id:item.id,senId:ite.senId}}" :title="ite.title"><span>{{ite.title}}</span></router-link></h4>
          </dd>
        </dl>
      </div>

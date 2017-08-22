@@ -76,7 +76,7 @@
         },
         //提交搜索
         searchSubmit(){
-          this.$router.push('/search');
+          this.$router.push('/');
         }
       },
       watch:{

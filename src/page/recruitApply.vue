@@ -1,35 +1,56 @@
 <template>
   <div>
-    <head-return title="在线留言"></head-return>
+    <alert-mup alert-mup-type="recruit"></alert-mup>
     <div class="sb_box">
       <div class="aboutEditor">
         <div class="metinfo_mobile_form">
           <form>
+            <input type="hidden" name="lang" value="cn">
             <ul>
-              <li class="input required">
-                <span class="info"></span>
-                <div class="xbox"><input name="para28" type="text" class="input-text required" placeholder="姓名"></div>
+              <li class="select">
+                <div class="xbox">
+                  <span class="name">应聘职位</span>
+                  <select name="jobid"><option value="1">会籍顾问</option><option value="2">私人教练</option><option value="3">健身顾问(销售)</option><option value="4">前台接待</option><option value="5">前台水吧</option><option value="6">健美操教练</option><option value="7">瑜伽教练</option><option value="8">舞蹈教练</option></select>
+                </div>
               </li>
               <li class="input ">
                 <span class="info"></span>
-                <div class="xbox"><input name="para29" type="text" class="input-text " placeholder="电话"></div>
+                <div class="xbox"><input name="para1" type="text" class="input-text " placeholder="姓名"></div>
               </li>
               <li class="input ">
                 <span class="info"></span>
-                <div class="xbox"><input name="para30" type="text" class="input-text " placeholder="Email"></div>
+                <div class="xbox"><input name="para2" type="text" class="input-text " placeholder="性别"></div>
               </li>
               <li class="input ">
                 <span class="info"></span>
-                <div class="xbox"><input name="para31" type="text" class="input-text " placeholder="其他联系方式"></div>
+                <div class="xbox"><input name="para3" type="text" class="input-text " placeholder="年龄"></div>
               </li>
-              <li class="textarea required">
+              <li class="input ">
                 <span class="info"></span>
-                <div class="xbox"><textarea name="para32" class="textarea-text" placeholder="留言内容"></textarea></div>
+                <div class="xbox"><input name="para4" type="text" class="input-text " placeholder="学历"></div>
+              </li>
+              <li class="input ">
+                <span class="info"></span>
+                <div class="xbox"><input name="para5" type="text" class="input-text " placeholder="手机号码"></div>
+              </li>
+              <li class="input ">
+                <span class="info"></span>
+                <div class="xbox"><input name="para6" type="text" class="input-text " placeholder="电子邮箱"></div>
+              </li>
+              <li class="input ">
+                <span class="info"></span>
+                <div class="xbox"><input name="para7" type="text" class="input-text " placeholder="工作年限"></div>
+              </li>
+              <li class="textarea ">
+                <span class="info"></span>
+                <div class="xbox"><textarea name="para8" class="textarea-text" placeholder="工作经验"></textarea></div>
+              </li>
+              <li class="textarea ">
+                <span class="info"></span>
+                <div class="xbox"><textarea name="para9" class="textarea-text" placeholder="自我介绍"></textarea></div>
               </li>
             </ul>
-            <input type="hidden" name="ip" value="182.149.126.247">
-            <input type="hidden" name="lang" value="cn">
-            <div class="input-submit"><input type="submit" name="Submit" value="提交留言"></div>
+            <div class="input-submit"><input type="submit" name="Submit" value="提交信息"></div>
           </form>
         </div>
       </div>
@@ -39,22 +60,19 @@
 </template>
 
 <script>
-  import headReturn from "../components/header/headReturn.vue"
   import footBot from "../components/footer/foot.vue"
   import alertMup from "../components/common/alertMup.vue"
   import {recruit} from '../service/getData'
   export default{
     components:{
       footBot,
-      alertMup,
-      headReturn
+      alertMup
     }
   }
 </script>
 
 <style lang="scss">
   .metinfo_mobile_form{
-    margin-top: 46px;
     li{
       position: relative;
       margin-bottom: 10px;

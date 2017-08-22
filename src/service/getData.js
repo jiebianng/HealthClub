@@ -31,8 +31,9 @@ export const contact = () => fetch('/contact.json');
  * 新闻动态
  */
 
-export const news = (newsId) => fetch('/news.json',{
-  newsId
+export const news = (newsId,page) => fetch('/news.json',{
+  newsId,
+  page
 });
 
 /**
@@ -47,7 +48,8 @@ export const curriculum = (curriculumId) => fetch('/curriculum.json',{
  * 招贤纳士
  */
 
-export const recruit = (recruitId) => fetch('/recruit.json',{
-  recruitId
+export const recruit = (recruitId,page) => fetch('/recruit.json',{
+  recruitId,
+  page
 });
 

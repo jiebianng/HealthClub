@@ -1,54 +1,40 @@
 <template>
   <div>
-    <head-return title="职位详情"></head-return>
+    <head-return title="产品详情"></head-return>
     <div class="showjob">
-      <h1 class="title">会籍顾问</h1>
+      <img src="/static/upload/1384495740.jpg" alt="" width="100%">
+      <h1 class="title">杠铃操</h1>
       <div class="paralist">
         <ul class="list-none">
           <li>
-            <div class="pn">发布日期：</div>
-            <div class="pv">2013-10-29</div>
+            <div class="pn">项目名称：</div>
+            <div class="pv">杠铃操</div>
           </li>
           <li>
-            <div class="pn">工作地点：</div>
-            <div class="pv">长沙</div>
+            <div class="pn">项目范围：</div>
+            <div class="pv">集体健身项目</div>
           </li>
           <li>
-            <div class="pn">招聘人数：</div>
-            <div class="pv">2人</div>
+            <div class="pn">项目内容：</div>
+            <div class="pv">塑造形体、减少脂肪</div>
           </li>
           <li>
-            <div class="pn">工资待遇：</div>
-            <div class="pv">面议</div>
+            <div class="pn">上课方式：</div>
+            <div class="pv">团体课程</div>
           </li>
           <li>
-            <div class="pn">有效期：</div>
-            <div class="pv">不限 </div>
+            <div class="pn">更新时间：</div>
+            <div class="pv">2013-11-15 </div>
           </li>
         </ul>
         <div class="clear"></div>
       </div>
-      <div class="info_cv"><router-link :to="{path:'/recruitApply',query:{swiperSlide:4,id:2,applyId:$route.query.id}}" class="button">在线应聘</router-link></div>
       <h3 class="Tabtitle">
         <div class="l">详细描述</div>
       </h3>
       <div class="editor">
-        <div><p>
-          <strong>详 细 描 述：</strong><br>
-          1．负责会员卡销售工作，大专学历，至少1年以上销售工作经验；</p>
-          <p>
-            2．谈吐流利，思维清晰，仪表端正；</p>
-          <p>
-            3．热爱销售工作，且工作勤奋；</p>
-          <p>
-            4．具有团队合作精神，为人正直、诚实、敬业；</p>
-          <p>
-            5．具有良好的工作习惯、较高的职业素养与道德；</p>
-          <p>
-            6．善与客户沟通，能够快速消除陌生感，分析、判断能力强。<br>
-            &nbsp;</p>
-          <p>
-            &nbsp;</p>
+        <div>
+          <p>杠铃操世界上最快的塑身方法是健身史上最成功的集体健身项目，世界上最快塑造形体、减少脂肪的运动。它成功地将杠铃引入操房，运用杠铃达到良好的塑身效果，将有氧运动与无氧运动完美结合，带来了集体健身的革命性突破。简单易学，成为增强体力和自信的起点。富有节奏的音乐和新颖的动作编排，伴随您完成1小时的练习。在热情高涨、激动人心的氛围中进行身体锻炼，适合每个想将力量训练与有氧训练结合起来的人。</p>
         </div>
       </div>
     </div>
