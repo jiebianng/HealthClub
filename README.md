@@ -1,7 +1,7 @@
 # HealthClub
 健身俱乐部
 
-[静态展示](https://jiebianng.github.io/weui-shop-vue/dist/)<br />
+[静态展示](https://jiebianng.github.io/HealthClub/dist/)<br />
 
 ## 项目运行
 
